@@ -1,14 +1,13 @@
 <?php
+include 'autoload.php';
 
-require 'Paciente.php';
-require 'IMC.php';
+use Classes\Atleta;
+use Classes\Medico;
+use Classes\Logs\Relatorio;
 
-$pessoaUm = new Paciente("Maria", 60, 1.6);
-$imcPessoaUm = IMC::calcImc($pessoaUm);
-
-$classificacaoPessoaUm = IMC::classificaPorImc($pessoaUm);
-
-
-var_dump($imcPessoaUm);
-var_dump($classificacaoPessoaUm);
-
+$jogador = new Atleta("Pedro Geromel", 1.90,84, 35);
+$medico = new Medico("Paulo Paixão", 12345, "Fisiologista", 65);
+$relatorio = new Relatorio;
+$relatorio->add($medico);
+$relatorio->add($jogador);
+$relatorio->imprime();
