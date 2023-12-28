@@ -27,7 +27,7 @@ class Atleta extends Pessoa implements iFuncionario
      */
     public function mostrarSalario(): string
     {
-        return "Salário: R$ 00.000,00";
+        return "Salário: R$ 20.000,00";
     }
 
     /**
